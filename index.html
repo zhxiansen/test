@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f7f7f7;
-  }
-  .container {
-    text-align: center;
-  }
-  h1 {
-    color: #333;
-    margin-bottom: 0.5em;
-  }
-  p {
-    color: #666;
-    font-size: 1rem;
-  }
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            transition: background-color 0.5s ease;
+            backdrop-filter: blur(10px); /* 添加高斯模糊 */
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+            padding: 40px; /* 增加内边距 */
+            border-radius: 20px; /* 圆角边框 */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px); /* 添加容器的高斯模糊效果 */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h1 {
+            color: #007bff; /* 蓝色标题 */
+            margin-bottom: 0.5em;
+            font-size: 2.5rem; /* 增加标题大小 */
+        }
+
+        p {
+            color: #555; /* 深灰色文本 */
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem; /* 增加链接文本大小 */
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        /* Animation for the container */
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* 调整小屏幕的标题大小 */
+            }
+
+            p {
+                font-size: 1rem; /* 调整小屏幕的文本大小 */
+            }
+
+            a {
+                font-size: 1rem; /* 调整小屏幕的链接大小 */
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-  <h1>即将跳转...</h1>
-  <p>如果您的浏览器没有自动跳转，请点击以下链接：</p>
-  <a href="https://www.zhxiansen.top" id="link">https://www.zhxiansen.top</a>
-</div>
-<script>
-  // 这里的 'https://www.example.com' 是你想要跳转到的目标网址
-  function redirect() {
-    window.location.href = 'https://www.zhxiansen.top';
-  }
-  // 设置3秒后跳转
-  setTimeout(redirect, 3000);
-</script>
+    <div class="container">
+        <h1>即将跳转...</h1>
+        <p>如果您的浏览器没有自动跳转，请点击以下链接：</p>
+        <a href="https://www.zhxiansen.top" id="link">https://www.zhxiansen.top</a>
+    </div>
+    <script>
+        function redirect() {
+            window.location.href = 'https://www.zhxiansen.top';
+        }
+        setTimeout(redirect, 3000);
+    </script>
 </body>
 </html>
